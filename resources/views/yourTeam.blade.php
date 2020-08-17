@@ -4,7 +4,7 @@
     @foreach(range(1,25) as $index)
     <li class="my-5 ">
         <div class="flex item-center ">
-            <img src="https://i.pravatar.cc/35" alt="" class="rounded-full mr-4">
+            <img src="/" alt="" class="rounded-full mr-4">
             Santino Isgrò
         </div>
     </li>

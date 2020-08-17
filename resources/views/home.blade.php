@@ -12,10 +12,9 @@
                 @include('publish_poll_panel')
 
                 <div class="border border-gray-300 rounded-lg">
-                    @include('single_poll')
-                    @include('single_poll')
-                    @include('single_poll')
-                    @include('single_poll')
+                    @foreach ($polls as $poll)
+                        @include('single_poll')    
+                    @endforeach
                 </div>
             </div>
 

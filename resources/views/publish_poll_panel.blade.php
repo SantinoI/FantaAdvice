@@ -16,7 +16,7 @@
                     <hr class="my-2">
 
                     <footer class="flex justify-between">
-                        <img src="https://i.pravatar.cc/50" class="rounded-full mr-2">
+                        <img src="{{auth()->user()->avatar}}" class="rounded-full mr-2 w-10 h-10">
                         <button class="bg-blue-500 rounded-lg shadow py-4 px-2 text-white"type="submit">Create poll</button>
                     </footer>
                 </form>

@@ -4,11 +4,11 @@
     </div>
 
     <div class="w-full">
-    <h5 class="font-bold mb-2">{{$poll->user->name}}</h5>
-        <input type="radio" id="player1" name="selected" value="player1">
+    <h5 class="font-bold mb-4">{{$poll->user->name}}</h5>
+        <input class="mb-4" type="radio" id="player1" name="selected" value="player1">
         <label for="player1">{{$poll->player1}}</label>
         <br>
-        <input type="radio" id="player2" name="selected" value="player2">
+        <input class="mb-4" type="radio" id="player2" name="selected" value="player2">
     <label for="player2">{{$poll->player2}}</label>
     </div>
     <hr class="mb-8">

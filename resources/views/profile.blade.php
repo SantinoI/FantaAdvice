@@ -5,7 +5,8 @@
             <img src="{{auth()->user()->avatar}}" alt="" class="rounded-full mr-4 ">
             
         </div>
-            <div class="flex item-center text-lg font-bold my-3 mx-4">
+        
+        <div class="flex-col text-lg font-bold my-3 mx-4">
             <p>{{auth()->user()->name}}</p>
             <br>
             <a  href="{{ route('logout') }}" 
@@ -17,7 +18,7 @@
             <form id="logout-button" action="{{ route('logout') }}" method="POST">
                 @csrf
             </form>
-
         </div>
+    
     </li>
 </ul>

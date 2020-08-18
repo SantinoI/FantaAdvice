@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Poll;
 use App\Player;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,7 +16,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $players = Player::All();
+        $players = User::find(auth()->user()->id)->player;
         return view('home',[
             'polls' => auth()->user()->timeline(),
             'players' => $players,

@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function timeline(){
         return Poll::latest()->get();
     }
+
+    public function player(){
+        return $this->hasMany(Player::class);
+    }
 }

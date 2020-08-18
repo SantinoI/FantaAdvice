@@ -1,5 +1,6 @@
 <div class="flex-1 ">
-            <div class="border border-blue-400 rounded-lg py-2 px-8 mb-8">
+            <div class="border border-blue-400 rounded-lg py-3 px-8 mb-8">
+                <h1 class="font-bold text-lg text-blue-500">Ask your question to the FantaAdvice community</h1>
                 <form action="/polls" method="POST">
                     @csrf
                     <div class="inline relative w-50 m-2">

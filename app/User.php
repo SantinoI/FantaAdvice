@@ -38,17 +38,14 @@ class User extends Authenticatable
     ];
 
     public function timeline(){
-        return Poll::latest()->get();
+        return Poll::latest()->withVotes()->get();
     }
 
     public function player(){
         return $this->hasMany(Player::class);
     }
-<<<<<<< HEAD
 
     public function players(){
         return $this->hasOne('App\Player');
     }
-=======
->>>>>>> master
 }

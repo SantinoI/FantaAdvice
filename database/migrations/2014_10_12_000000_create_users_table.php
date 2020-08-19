@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->text('avatar')->default("https://i.ibb.co/vVNFX1j/user.png");
             $table->string('password');
             $table->rememberToken();
+            $table->integer('credits')->default(10);
             $table->timestamps();
         });
     }

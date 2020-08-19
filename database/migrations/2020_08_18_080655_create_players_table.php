@@ -21,6 +21,7 @@ class CreatePlayersTable extends Migration
             $table->float('fantamedia');
             $table->float('last_score');
             $table->text('img');
+            $table->text('club')->nullable();
             $table->timestamps();
         });
     }

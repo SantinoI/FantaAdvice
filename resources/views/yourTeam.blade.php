@@ -1,7 +1,7 @@
 <h3 class = "font-bold text-lg mb-4 my-2 block">Ultimi voti del tuo team</h3>
 
 <ul>
-    @foreach($players as $player)
+    @forelse($players as $player)
     <li class="my-5 ">
         <div class="items-center">
             <img src="{{$player->img}}" alt="" class="rounded-full ml-2 mr-4 ">
@@ -11,5 +11,8 @@
         <hr>
         </div>
     </li>
-    @endforeach
+    @empty
+        <p class="p-4">Please insert your Team</p>
+
+    @endforelse
 </ul>

@@ -44,11 +44,8 @@ class User extends Authenticatable
     public function player(){
         return $this->hasMany(Player::class);
     }
-<<<<<<< HEAD
 
     public function players(){
         return $this->hasOne('App\Player');
     }
-=======
->>>>>>> master
 }

@@ -38,7 +38,7 @@ class User extends Authenticatable
     ];
 
     public function timeline(){
-        return Poll::latest()->get();
+        return Poll::latest()->withVotes()->get();
     }
 
     public function player(){

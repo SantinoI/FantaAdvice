@@ -1,18 +1,17 @@
 <h3 class = "font-bold text-lg text-center">Your Team</h3>
 
 <ul>
-    @forelse($players as $player)
-    <li class="my-5 ">
-        <div class="items-center">
-            <img src="{{$player->img}}" alt="" class="rounded-full ml-2 mr-4 ">
-        <p class="font-bold ml-2">{{$player->name}}</p>
-        <p class=" ml-2"> Juventus</p>
-        <p class="font-bold ml-2"> {{$player->fantamedia}}</p>
+    @foreach($players as $player)
+    <li class="my-3 ">
+        <img src="{{$player->img}}"  class="img-thumbnail mx-12" style="height: 200px">
+        <p class="font-bold  text-center ">{{$player->name}}</p>
+        <p class="font-bold  text-center">{{$player->club}}</p>
+        <p class="font-bold  text-center">{{$player->role}}</p>
         <hr>
-        </div>
     </li>
+    @endforeach
+</ul>
 
-    @empty
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Start by entering your team
@@ -30,16 +29,16 @@
                     </div>
 
                     <div class="modal-body">
-                        <form autocomplete="off">
-                            <input type="text" name="player_name" id="player_name" class="typeahead form-control" placeholder="Enter player name" />
+                        <form action="/home/insertPlayer" method="POST" autocomplete="off">
+                            @csrf
+                            <input type="text" name="player_name" id="player_name" class=" uppercasetypeahead form-control" placeholder="Enter player name" />
                             <div class="dropdown" id="playerList"></div>
-                        </form>
-                        @csrf
-                    </div>
 
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Add Player</button>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Add Player</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -67,6 +66,4 @@
                 });  
             });
       </script>
-    @endforelse
-</ul>
 

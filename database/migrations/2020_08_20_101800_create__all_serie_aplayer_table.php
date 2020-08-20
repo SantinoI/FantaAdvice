@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDifensoriTable extends Migration
+class CreateAllSerieAplayerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDifensoriTable extends Migration
      */
     public function up()
     {
-        Schema::create('difensori', function (Blueprint $table) {
+        Schema::create('_all_serie_aplayer', function (Blueprint $table) {
             $table->id();
             $table->text("R");
             $table->text("Nome");
@@ -31,6 +31,6 @@ class CreateDifensoriTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('difensori');
+        Schema::dropIfExists('_all_serie_aplayer');
     }
 }

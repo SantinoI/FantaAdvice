@@ -38,6 +38,6 @@ class ImportSQL extends Command
      */
     public function handle()
     {
-        return DB::unprepared(file_get_contents('C:\Users\santi\Documents\Uni\WebProgramming\Portieri.sql'));
+        return DB::unprepared(file_get_contents('C:\Users\santi\Documents\Uni\WebProgramming\all_serie_aplayer.sql'));
     }
 }

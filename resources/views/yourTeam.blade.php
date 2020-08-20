@@ -1,4 +1,4 @@
-<h3 class = "font-bold text-lg mb-4 my-2 block">Ultimi voti del tuo team</h3>
+<h3 class = "font-bold text-lg text-center">Your Team</h3>
 
 <ul>
     @forelse($players as $player)
@@ -11,7 +11,7 @@
         <hr>
         </div>
     </li>
-    
+
     @empty
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -28,11 +28,15 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
+
                     <div class="modal-body">
-                        <select name="" id="" class=" block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">  
-                                <option value="">ciao</option>   
-                        </select> 
+                        <form autocomplete="off">
+                            <input type="text" name="player_name" id="player_name" class="typeahead form-control" placeholder="Enter player name" />
+                            <div class="dropdown" id="playerList"></div>
+                        </form>
+                        @csrf
                     </div>
+
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Add Player</button>
@@ -40,6 +44,29 @@
                 </div>
             </div>
       </div>
+      <script type="text/javascript">
+            $(document).ready(function(){
+                $('#player_name').keyup(function(){ 
+                    var query = $(this).val();
+                    if(query != ''){
+                        var _token = $('input[name="_token"]').val();
+                        $.ajax({
+                            url:"{{ route('home.fetch') }}",
+                            method:"POST",
+                            data:{query:query, _token:_token},
+                            success:function(data){
+                                $('#playerList').fadeIn();  
+                                $('#playerList').html(data);
+                            }
+                        });
+                    }
+                });
+                $(document).on('click', 'li', function(){  
+                    $('#player_name').val($(this).text());  
+                    $('#playerList').fadeOut();  
+                });  
+            });
+      </script>
     @endforelse
 </ul>
 

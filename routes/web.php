@@ -24,7 +24,10 @@ Route::post('/polls','PollController@store');
 
 Auth::routes();
 
+Route::post('/home/player','PlayerController@store');
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home/fetch','HomeController@fetch')->name('home.fetch');
 
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');

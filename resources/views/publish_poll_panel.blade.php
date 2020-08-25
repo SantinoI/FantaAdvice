@@ -27,8 +27,15 @@
                         <button class="bg-transparent hover:bg-blue-500 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" type="submit">Create poll</button>
                     </footer>
                 </form>
-                @error('player1_selected')
-                    <p class="text-red-500 font-bold text-sm mt-1 mb-1">{{$message}}</p>
-                @enderror
+
+                @if ($errors->any())
+                    <div class="alert alert-danger mt-3">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
         </div>

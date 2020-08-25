@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PollController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::post('/home/{poll}/vote1','PollVoteController@store');
 Route::delete('/home/{poll}/vote2','PollVoteController@destroy');
 
 Route::post('/polls','PollController@store');
+Route::delete('/player/{id}','PlayerController@destroy');
 
 Auth::routes();
 

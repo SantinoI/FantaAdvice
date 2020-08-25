@@ -32,4 +32,9 @@ class PlayerController extends Controller
         return redirect('/home');
 
     }
+
+    public function destroy($id){
+        Player::find($id)->delete();
+        return redirect('/home');
+    }
 }

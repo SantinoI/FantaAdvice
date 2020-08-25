@@ -3,10 +3,18 @@
 <ul>
     @foreach($players as $player)
     <li class="my-3 ">
+    <form action="/player/{{$player->id}}" method="POST"> 
+            @csrf
+            @method('DELETE')   
+            <button type="submit">
+                <img src="https://i.ibb.co/JmQrvXk/delete.png" class="h-8 w-8 absolute">
+            </button>
+        </form>
+
         <img src="{{$player->img}}"  class="img-thumbnail mx-12" style="height: 200px">
-        <p class="font-bold  text-center ">{{$player->name}}</p>
-        <p class="font-bold  text-center">{{$player->club}}</p>
-        <p class="font-bold  text-center">{{$player->role}}</p>
+        <p class="font-bold  text-center my-2 ">{{$player->name}}</p>
+        <p class="font-bold  text-center my-2">{{$player->club}}</p>
+        <p class="font-bold  text-center my-2">{{$player->role}}</p>
         <hr>
     </li>
     @endforeach

@@ -4,11 +4,11 @@
     </div>
 
     <div class="w-full">
-        <h5 class="font-bold mb-8">{{$poll->user->name}}</h5>
+        <h5 class="font-bold text-blue-500 mb-8">{{$poll->user->name}}</h5>
             <form method="POST" action="/home/{{$poll->id}}/vote1" >
                 @csrf
                 <div class ="flex justify-between mt-6 mr-6">
-                    <p>{{$poll->player1}}</p>
+                    <p class="font-bold text-gray-700 mb-8">{{$poll->player1}}</p>
                     <div class="flex">
                         
                     <button type="submit" class=" {{$poll->isVoted1By(auth()->user()) ? 'text-blue-500' : 'text-gray-500'}} font-bold  "> {{$poll->voti1 ?: 0}}</button>
@@ -26,7 +26,7 @@
                 @method('DELETE')
                 @csrf
                 <div class ="flex justify-between mt-6 mr-6">
-                    <p>{{$poll->player2}}</p>
+                    <p class="font-bold text-gray-700 mb-8">{{$poll->player2}}</p>
                     <div class="flex">
                         <button type="submit" class="{{$poll->isVoted2By(auth()->user()) ? 'text-blue-500' : 'text-gray-500'}} font-bold  ">{{$poll->voti2 ?: 0}}</button>  
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="ml-2 mb-2 w-8 {{$poll->isVoted2By(auth()->user()) ? 'text-blue-500' : 'text-gray-500'}}" width="30px" height="30px">

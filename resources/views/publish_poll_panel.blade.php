@@ -4,7 +4,8 @@
                 <form action="/polls" method="POST">
                     @csrf
                     <div class="inline relative w-50 m-2">
-                        <select name="player1_selected" id="player1_selected" class=" block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline ">
+                        <select name="player1_selected" id="player1_selected" class=" font-bold text-gray-700 block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline ">
+                            <option disabled selected> SELECT PLAYER 1</option>
                             @foreach ($players as $player)
                                 <option>{{$player->name}}</option>    
                             @endforeach
@@ -12,7 +13,8 @@
                     </div>
 
                     <div class="inline relative w-50 m-2">
-                        <select name="player2_selected" id="player2_selected" class=" block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                        <select name="player2_selected" id="player2_selected" class="font-bold text-gray-700 block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option disabled selected> SELECT PLAYER 2</option>
                             @foreach ($players as $player)
                                 <option>{{$player->name}}</option>    
                             @endforeach
@@ -24,7 +26,7 @@
 
                     <footer class="flex justify-between">
                         <img src="{{auth()->user()->avatar}}" class="rounded-full mr-2 w-10 h-10">
-                        <button class="bg-transparent hover:bg-blue-500 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" type="submit">Create poll</button>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="submit">Create poll</button>
                     </footer>
                 </form>
 

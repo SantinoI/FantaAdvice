@@ -1,8 +1,8 @@
-<h3 class = "font-bold text-lg text-center">Your Team</h3>
+<h3 class = "font-bold text-lg text-blue-500 text-center">Your Team</h3>
 
 <ul>
     @foreach($players as $player)
-    <li class="my-3 ">
+    <li class="my-3  ">
     <form action="/player/{{$player->id}}" method="POST"> 
             @csrf
             @method('DELETE')   
@@ -12,9 +12,11 @@
         </form>
 
         <img src="{{$player->img}}"  class="img-thumbnail mx-12" style="height: 200px">
-        <p class="font-bold  text-center my-2 ">{{$player->name}}</p>
-        <p class="font-bold  text-center my-2">{{$player->club}}</p>
-        <p class="font-bold  text-center my-2">{{$player->role}}</p>
+        <div class="  font-bold text-gray-700">
+            <p class=" bg-blue-300 bg-opacity-25 rounded font-bold  text-center my-2 pt-1 ">{{$player->name}}</p>
+            <p class="  bg-blue-300 bg-opacity-25 rounded font-bold  text-center my-2 pt-1">{{$player->club}}</p>
+            <p class=" bg-blue-300 bg-opacity-25 rounded font-bold  text-center my-2 pb-1">{{$player->role}}</p>
+        </div>
         <hr>
     </li>
     @endforeach

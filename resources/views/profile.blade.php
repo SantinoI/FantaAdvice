@@ -23,7 +23,7 @@
 
 
             <a  href="{{ route('logout') }}" 
-                class="no-underline"
+                class="font-bold text-gray-700 no-underline"
                 onclick="event.preventDefault();
                 document.getElementById('logout-button').submit();">
                 {{ __('Logout') }}

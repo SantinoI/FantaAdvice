@@ -23,11 +23,12 @@ Route::post('/home/{poll}/vote1','PollVoteController@store');
 Route::delete('/home/{poll}/vote2','PollVoteController@destroy');
 
 Route::post('/polls','PollController@store');
-Route::delete('/player/{id}','PlayerController@destroy');
+
 
 Auth::routes();
 
 Route::post('/home/insertPlayer','PlayerController@store');
+Route::delete('/player/{id}','PlayerController@destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home/fetch','HomeController@fetch')->name('home.fetch');

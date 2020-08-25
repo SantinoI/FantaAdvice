@@ -29,4 +29,10 @@ class PollController extends Controller{
 
         return redirect('/home');
     }
+    
+
+    public function destroy($id){
+        Poll::find($id)->delete();
+        return redirect('/home');
+    }
 }

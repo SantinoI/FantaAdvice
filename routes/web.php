@@ -23,6 +23,7 @@ Route::post('/home/{poll}/vote1','PollVoteController@store');
 Route::delete('/home/{poll}/vote2','PollVoteController@destroy');
 
 Route::post('/polls','PollController@store');
+Route::delete('/polls/{id}','PollController@destroy');
 
 
 Auth::routes();

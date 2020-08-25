@@ -4,7 +4,21 @@
     </div>
 
     <div class="w-full">
-        <h5 class="font-bold text-blue-500 mb-8">{{$poll->user->name}}</h5>
+        <div class="flex justify-between">
+            <h5 class="font-bold text-blue-500 mb-8">{{$poll->user->name}}</h5>
+
+            @if($poll->user_id == Auth()->user()->id)
+            <form action="/polls/{{$poll->id}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit">
+                    <img src="https://i.ibb.co/jMR7RqQ/close.png" width=10" height="10">
+                </button>
+            </form>
+            @endif
+
+        </div>
+        
             <form method="POST" action="/home/{{$poll->id}}/vote1" >
                 @csrf
                 <div class ="flex justify-between mt-6 mr-6">

@@ -5,6 +5,8 @@ use App\Vote;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\DB;
+
 class Poll extends Model{
 
     protected $guarded = [];
@@ -25,11 +27,14 @@ class Poll extends Model{
     }
 
     public function vote1($user = null,$player = true){
+        if(!$this->votes()->where('user_id',"=",auth()->user()->id,'and','player',"=",$player)->exists()){
+            DB::table('users')->where('id',"=",auth()->user()->id)->increment('credits');
+        }
         $this->votes()->updateOrCreate([
             'user_id' => $user ? $user->id : auth()->id(),
         ],[
             'player' => $player
-        ]);
+        ]);  
     }
     public function vote2($user= null){
         return $this->vote1($user, false);

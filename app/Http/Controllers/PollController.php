@@ -8,9 +8,9 @@ class PollController extends Controller{
 
     public function store(Request $request){
 
-        $player1_check = request()->validate(['player1_selected' => 'required|min:1']);
+        $player1_check = request()->validate(['player1_selected' => 'required|min:1|different:player2_selected']);
         
-        $player2_check = request()->validate(['player2_selected' => 'required|min:1']);
+        $player2_check = request()->validate(['player2_selected' => 'required|min:1|different:player1_selected']);
 
         Poll::create([
             'user_id' => auth()->id(),

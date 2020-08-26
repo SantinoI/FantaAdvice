@@ -7,7 +7,7 @@
         <div class="flex justify-between">
             <h5 class="font-bold text-blue-500 mb-8">{{$poll->user->name}}</h5>
 
-            @if($poll->user_id == Auth()->user()->id)
+            @if($poll->user_id == Auth()->user()->id ||Auth()->user()->is_super_admin == 1 )
             <form action="/polls/{{$poll->id}}" method="POST">
                 @csrf
                 @method('DELETE')

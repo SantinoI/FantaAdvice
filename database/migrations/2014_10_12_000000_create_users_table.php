@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->integer('credits')->default(10);
+            $table->unsignedTinyInteger('is_super_admin')->default(0);
             $table->timestamps();
         });
     }

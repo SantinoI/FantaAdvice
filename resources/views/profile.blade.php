@@ -3,21 +3,17 @@
     <li>
         <div class="flex item-center my-8">
             <img src="{{auth()->user()->avatar}}" alt="" class="rounded-full mr-4 ">
-            
         </div>
+        <p class="text-center font-bold text-gray-700 my-3 ">{{auth()->user()->name}}</p>
         
-        <div class="flex-col ml-6 text-lg">
-            <p class="text-center font-bold text-gray-700 my-3 ">{{auth()->user()->name}}</p>
-            <div class="flex">
-                <p class="text-center font-bold my-3 ml-8 mr-3 ">{{auth()->user()->credits}} </p>
+        <div class="flex justify-center">
+            <p class="text-center font-bold my-3 mr-2">{{auth()->user()->credits}} </p>
             <img src="https://i.ibb.co/GRVFmbn/coin.png" alt="" class="rounded-full  w-10 h-10">
-            </div>
+        </div>
+        <div class="flex-col ml-6 text-lg">
             
-            
+        
             <hr class="mt-3 mb-3">
-            <ul class="font-bold text-gray-700">
-                <li class="mb-3"> <a class="text-lg ">Change Image</a></li>
-            </ul>
 
             <a  href="{{ route('logout') }}" 
                 class="font-bold text-gray-700 no-underline"

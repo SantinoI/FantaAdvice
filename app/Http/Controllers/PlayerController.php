@@ -20,13 +20,20 @@ class PlayerController extends Controller
         }
 
         $nuovo = new Player();
+        $last_score = $nuovo->getVote($name,$team,$id);
         $nuovo->user_id = auth()->user()->id;
         $nuovo->name = $name;
         $nuovo->role = $role;
         $nuovo->club = $team;
         $nuovo->img = 'http://content.fantacalcio.it/web/campioncini/card/'.$name. '.jpg';
         $nuovo->fantamedia = 7;
-        $nuovo->last_score = 7;
+        if($last_score[25]){
+            $nuovo->last_score = "NG";
+        }else{
+            $nuovo->last_score = $last_score[25];
+        }
+        
+        
         
         $nuovo->save();
         return redirect('/home');
@@ -37,4 +44,5 @@ class PlayerController extends Controller
         Player::find($id)->delete();
         return redirect('/home');
     }
+    
 }

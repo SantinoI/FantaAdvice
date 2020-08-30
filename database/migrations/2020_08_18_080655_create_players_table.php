@@ -19,7 +19,7 @@ class CreatePlayersTable extends Migration
             $table->text('name');
             $table->text('role');
             $table->float('fantamedia');
-            $table->float('last_score');
+            $table->text('last_score')->default("Non schierato");
             $table->text('img');
             $table->text('club')->nullable();
             $table->timestamps();

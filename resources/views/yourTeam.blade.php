@@ -13,9 +13,9 @@
 
         <img src="{{$player->img}}"  class="img-thumbnail mx-12" style="height: 200px">
         <div class="  font-bold text-gray-700">
-            <p class=" bg-blue-300 bg-opacity-25 rounded font-bold  text-center my-2 pt-1 ">{{$player->name}}</p>
+            <p class=" bg-blue-300 bg-opacity-25 rounded font-bold  text-center my-2 pt-1 ">{{$player->name}} ({{$player->role}})</p>
             <p class="  bg-blue-300 bg-opacity-25 rounded font-bold  text-center my-2 pt-1">{{$player->club}}</p>
-            <p class=" bg-blue-300 bg-opacity-25 rounded font-bold  text-center my-2 pb-1">{{$player->role}}</p>
+            <p class=" bg-blue-300 bg-opacity-25 rounded font-bold  text-center my-2 pb-1">Last Score {{$player->last_score}}</p>
         </div>
         <hr>
     </li>

@@ -16,9 +16,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <!-- Styles -->
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -26,9 +29,10 @@
     <div id="app">
        
         <section class="px-8 py-4 mb-8">
-            <header class = "container mx-auto">
+            <header class = "container  flex inline-block">
+                <img src="https://i.pinimg.com/736x/76/39/27/763927b7a5ac08de155f4566ef5bfa57.jpg" width="80" height="80">
                 <h1 style="font-family: 'DM Serif Display', serif; font-family: 'Monoton', cursive;
-                font-size: 50px; color: #1d85da; ">FantAdvice</h1>
+                font-size: 50px; color: #1d85da; margin-top:8px ">FantAdvice</h1>
             </header>
         </section>
 

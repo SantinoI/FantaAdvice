@@ -1,6 +1,46 @@
 @extends('layouts.app')
-  
+
+
 @section('content')
+    <div class="login-dark rounded-lg">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            <div class="text-center font-mono text-lg">
+                To get started. <br> Login or create an Account
+            </div>
+            
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group"><input class="form-control @error('email') is-invalid @enderror" type="email" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus></div>
+            <div class="form-group"><input class="form-control  @error('password') is-invalid @enderror" type="password" name="password" placeholder="Password" name="password" required autocomplete="current-password"></div>
+
+            <div class="form-group">
+
+                <div class="flex justify-between">
+                    <button class=" btn btn-outline-primary" type="submit">Login</button>
+                    <button type="button " class=" hover:text-white btn btn-outline-primary ">
+                    <a class=" hover:no-underline hover:text-white "href="{{ route('register') }}">
+                        Register
+                    </a>
+                </button>
+                </div>
+                
+                <hr>
+                <div class="text-center  font-mono text-lg">
+                    Sign in with Google
+                
+                    <a href="{{ url('auth/google') }}" class="flex justify-center " style="margin-top: 20px;">
+                        <span class="iconify" data-icon="ant-design:google-circle-filled" data-inline="false" style="color: #2980EF;" data-width="50" data-height="50"></span>
+                    </a> 
+                </div>
+            </div> 
+
+        </form>
+    
+    </div>
+
+@endsection
+
+<!--
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -74,4 +114,6 @@
         </div>
     </div>
 </div>
-@endsection
+-->
+
+

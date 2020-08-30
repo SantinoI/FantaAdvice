@@ -1,5 +1,61 @@
 @extends('layouts.app')
 
+
+@section('content')
+    <div class="login-dark rounded-lg">
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
+
+            <p class="text-center font-mono text-lg">Create a new Account</p> 
+                
+            <div class="flex justify-center"><span class="iconify" data-icon="mdi:account-plus" data-inline="false" style="color: #2980EF;" data-width="150" data-height="150"></span></div>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Name">
+
+                @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+                <input id="password-confirm" type="password" class="form-control mb-3" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
+            <div class="form-group">
+
+                <div class="flex justify-center">
+                    <button class=" btn btn-outline-primary" type="submit">Register</button>
+                </div>
+                
+                <hr>
+                <div class="text-center font-mono text-lg">
+                    Sign up with Google
+                
+                    <a href="{{ url('auth/google') }}" class="flex justify-center " style="margin-top: 20px;">
+                        <span class="iconify" data-icon="ant-design:google-circle-filled" data-inline="false" style="color: #2980EF;" data-width="50" data-height="50"></span>
+                    </a> 
+                </div>
+            </div> 
+
+        </form>
+    
+    </div>
+
+@endsection
+
+<!--
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -75,3 +131,4 @@
     </div>
 </div>
 @endsection
+-->

@@ -1,27 +1,20 @@
 <p align="center"><img src="https://i.ibb.co/8zr0Rj1/Fanta-Advice.jpg" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+## FantaAdvice
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+FantaAdvice è una Web App creata con lo scopo di facilitare la gestione della tua rosa al Fantacalcio. Un'ampia community sarà a tua disposizione per consigliarti le scelte migliori e chiarire qualsiasi dubbio di formazione. In paricolar modo grazie a FantaAdvice potrai:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Pubblicare sondaggi chiedendo consiglio alla community su quale giocatore schierare per ciascuna giornata.
+- Inserire la propria rosa.
+- Avere sempre a disposizione l'ultima pagella dei tuoi giocatori.
+- Generare credito rispondendo ai sondaggi degli altri utenti della community.
+- Ridurre finalmente le ore passate a seguire sondaggi e dirette Instagram di consigli sul Fantacalcio.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+
+## Home Page
+<a href="https://ibb.co/9synkPH"><img src="https://i.ibb.co/BqTL5k2/home.jpg" alt="home" border="0"></a>
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 

@@ -25,9 +25,6 @@ La Web App tralasciando la pagina di Welcome, Login e Registrazione è struttura
 - La terza sezione rappresenta la parte inerente al profilo dell'utente loggato. In particolare mostra l'immagine del profilo, il nome utente, il credito disponibile, e il pulsante di logout.
 
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
 ### Tecnologie utilizzate
 
@@ -35,7 +32,22 @@ Il progetto è stato interamente realizzato utilizzando il Framework Laravel e d
 - **[Laravel](https://laravel.com/)**
 - **[MySql](https://www.mysql.com/it/)**
 
+Altre risorse esterne sono:
+- **[Bootstrap](https://getbootstrap.com/)** 
+- **[Tailwindcss](https://tailwindcss.com/)** 
+- **[Iconify](https://iconify.design/)** 
+- **[Goutte](https://github.com/FriendsOfPHP/Goutte)** 
+- **[Socialite](https://laravel.com/docs/5.6/socialite)** 
+
+
+
 ## DB-SCHEMA
 <p align="center"><img src="https://i.ibb.co/m6Rd1kc/DB-Schema.jpg" width="600"></p>
 
+## Screenshot
 
+<details open>
+<summary>Pagina Welcome</summary>
+<br>
+<a href="https://ibb.co/tx4PRNL"><img src="https://i.ibb.co/nnb8pVP/welcome.jpg" alt="welcome" border="0"></a>
+</details>

@@ -9,6 +9,7 @@
 
     <title>FantAdvice</title>
 
+    <link rel="icon" href="https://i.pinimg.com/736x/76/39/27/763927b7a5ac08de155f4566ef5bfa57.jpg">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 

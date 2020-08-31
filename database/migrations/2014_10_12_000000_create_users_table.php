@@ -17,7 +17,8 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table-> string('google_id')->nullable();
+            $table-> text('google_id')->nullable();
+            $table-> text('facebook_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->text('avatar')->default("https://i.ibb.co/vVNFX1j/user.png");
             $table->string('password');

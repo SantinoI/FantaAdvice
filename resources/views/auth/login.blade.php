@@ -25,12 +25,16 @@
                 </div>
                 
                 <hr>
-                <div class="text-center  font-mono text-lg">
-                    Sign in with Google
-                
-                    <a href="{{ url('auth/google') }}" class="flex justify-center " style="margin-top: 20px;">
-                        <span class="iconify" data-icon="ant-design:google-circle-filled" data-inline="false" style="color: #2980EF;" data-width="50" data-height="50"></span>
-                    </a> 
+                <div >
+                    <p class="text-center font-mono text-lg">Sign in with Google or Facebook </p> 
+                    <div class="flex justify-between mr-8 ml-8">
+                        <a href="{{ url('auth/google') }}">
+                            <span class="iconify" data-icon="ant-design:google-circle-filled" data-inline="false" style="color: #5399F2;" data-width="53" data-height="53"></span>
+                        </a>
+                        <a href="{{url('/redirect')}}">
+                            <span class="iconify" data-icon="cib:facebook" data-inline="false" style="color: #5399F2;" data-width="48" data-height="48"></span>
+                        </a> 
+                    </div>
                 </div>
             </div> 
 

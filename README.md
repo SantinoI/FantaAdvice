@@ -29,9 +29,10 @@ La Web App tralasciando la pagina di Welcome, Login e Registrazione è struttura
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+### Tecnologie utilizzate
 
-- **[Vehikl](https://vehikl.com/)**
+Il progetto è stato interamente realizzato utilizzando il Framework Laravel
+- **[Laravel](https://laravel.com/)**
 - **[Tighten Co.](https://tighten.co)**
 - **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
 - **[64 Robots](https://64robots.com)**

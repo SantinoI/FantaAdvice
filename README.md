@@ -50,12 +50,14 @@ Altre risorse esterne sono:
 <summary>Pagina Welcome</summary>
 <br>
 <a href="https://ibb.co/tx4PRNL"><img src="https://i.ibb.co/nnb8pVP/welcome.jpg" alt="welcome" border="0"></a>
-</details>
-<details open>
-    
+
 <summary>Pagina Login</summary>
 <br>
 <a href="https://ibb.co/H2M9Lkg"><img src="https://i.ibb.co/xscrKR5/Login.jpg" alt="Login" border="0"></a>
+</details>
+<details open>
+    
+
 </details>
 
 <summary>Pagina Registrazione</summary>

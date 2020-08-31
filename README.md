@@ -14,7 +14,8 @@ FantaAdvice è una Web App creata con lo scopo di facilitare la gestione della t
 
 
 ## Home Page
-<a href="https://ibb.co/9synkPH"><img src="https://i.ibb.co/BqTL5k2/home.jpg" alt="home" border="0"></a>
+<p align="center"><img src="https://i.ibb.co/BqTL5k2/home.jpg" width="400"></p>
+
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 

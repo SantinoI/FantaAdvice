@@ -27,11 +27,8 @@ class PlayerController extends Controller
         $nuovo->club = $team;
         $nuovo->img = 'http://content.fantacalcio.it/web/campioncini/card/'.$name. '.jpg';
         $nuovo->fantamedia = 7;
-        if($last_score[25]){
-            $nuovo->last_score = "NG";
-        }else{
-            $nuovo->last_score = $last_score[25];
-        }
+        $nuovo->last_score = $last_score[25];
+   
         
         
         

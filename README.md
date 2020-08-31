@@ -14,12 +14,16 @@ FantaAdvice è una Web App creata con lo scopo di facilitare la gestione della t
 
 
 ## Home Page
-<p align="center"><img src="https://i.ibb.co/BqTL5k2/home.jpg" width="800"></p>
+<p align="center"><img src="https://i.ibb.co/BqTL5k2/home.jpg" width="600"></p>
 
+La Web App tralasciando la pagina di Welcome, Login e Registrazione è strutturata su un'unica pagina singola. Possiamo tracciare 3 linee verticali immaginarie che suddividono la HomePage in 3 sub-sezioni.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- La sezione di sinistra prende il nome di "yourTeam". Qui è possibile tramite una modal inserire i membri del proprio Team e avere sempre a disposizione le informazioni inerenti a ciascun calciatore.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- All'interno della sezione centrale si sviluppa il vero e proprio funzionamento. Una volta che il proprio team è stato inserito sarà possibile creare i sondaggi(solo se si ha il credito disponibile) ed inserirli in bacheca.
+
+- La terza sezione rappresenta la parte inerente al profilo dell'utente loggato. In particolare mostra l'immagine del profilo, il nome utente, il credito disponibile, e il pulsante di logout.
+
 
 ## Laravel Sponsors
 

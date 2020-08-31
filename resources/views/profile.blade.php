@@ -1,7 +1,7 @@
 
 <ul>
     <li>
-        <div class="flex item-center my-8">
+        <div class="flex justify-center my-8">
             <img src="{{auth()->user()->avatar}}" alt="" class="rounded-full mr-4 ">
         </div>
         <p class="text-center font-bold text-gray-700 my-3 ">{{auth()->user()->name}}</p>

@@ -50,7 +50,7 @@
                         </svg>
                     </div> 
                 </div>
-            </form>         
+        </form>     
     </div>
     <hr class="mb-8">
     <div>

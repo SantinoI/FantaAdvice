@@ -35,8 +35,7 @@ class SocialAuthFacebookController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'facebook_id'=> $user->token,
-                    'avatar'=> $user->avatar,
-                    
+                    'avatar'=> $user->avatar,    
                     'password' => encrypt('123456dummy')
                 ]);
 

@@ -18,7 +18,8 @@ class PlayerController extends Controller
             $id = $item->id;
             //$media = $item->Qt_A
         }
-
+        $name = str_replace(' ', '-', $name);
+        $name = rtrim($name,'.');
         $nuovo = new Player();
         $last_score = $nuovo->getVote($name,$team,$id);
         $nuovo->user_id = auth()->user()->id;

@@ -46,6 +46,5 @@ Route::get('/callback', 'SocialAuthFacebookController@callback');
 Route::group(['middleware' => [
     'auth'
 ]], function(){
-    Route::post('/publish', 'GraphController@publishToProfile');
- 
+    Route::post('/publish/{id}', 'GraphController@publishToProfile');
 });

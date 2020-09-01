@@ -39,5 +39,15 @@
                         </ul>
                     </div>
                 @endif
+                @if (session('successo'))
+                    <div class="alert alert-success mt-2">
+                        {{ session('successo') }}
+                    </div>
+                @endif
+                @if (session('errore'))
+                <div class="alert alert-warning  mt-2">
+                    {{ session('errore') }}
+                </div>
+            @endif    
             </div>
         </div>

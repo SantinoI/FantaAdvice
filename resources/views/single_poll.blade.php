@@ -12,7 +12,7 @@
                 @csrf
                 @method('DELETE')
                 <button type="submit">
-                    <img src="https://i.ibb.co/jMR7RqQ/close.png" width=10" height="10">
+                    <img src="https://i.ibb.co/jMR7RqQ/close.png" width="10" height="10">
                 </button>
             </form>
             @endif
@@ -50,7 +50,20 @@
                         </svg>
                     </div> 
                 </div>
-        </form>     
+        </form>
+
+        @if($poll->user_id == Auth()->user()->id && Auth()->user()->facebook_id)
+            <form action="/publish/{{$poll->id}}" method="POST">
+                @csrf
+                <div class="flex justify-end mt-2">
+                    <button type="submit" class="flex">
+                        <span class="iconify" data-icon="raphael:slideshare" data-inline="false" style="color: #4299E1;" data-width="30px" data-height="30px"></span>
+                        <p class="mt-1  text-blue-500  font-bold">Share on FB</p>
+                    </button>
+                </div>
+                
+            </form>
+        @endif  
     </div>
     <hr class="mb-8">
     <div>
